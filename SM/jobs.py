@@ -1,12 +1,13 @@
+from setuptools import Command
 from SM.Handler import Handler
 from SM import Machine
 
 
 def first(machine:Machine):
-    nima = input("This is first machine state1 \n enter x:")
-    if nima=='1':
+    command = input("This is first machine state1 \n enter x:")
+    if command=='1':
         machine.goto('second')
-    elif nima=='2':
+    elif command=='2':
         machine.goto('third')
 
 def second(machine:Machine):
