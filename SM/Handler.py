@@ -18,7 +18,7 @@ class Handler(metaclass=SingletonMeta):
     __initial_machine = None
 
     def add_machine(self, name, initial=False):
-        machine = Machine(self)
+        machine = Machine()
         self.__machine_list[name] = machine
         if initial:
             self.__initial_machine = name
